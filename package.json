@@ -1,0 +1,21 @@
+{
+  "name": "yvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run",
+    "e2e:chrome": "cypress run --browser chrome"
+  },
+  "author": "Nithiss",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.8.1",
+    "cypress-file-upload": "^5.0.8"
+  },
+  "dependencies": {
+    "lambdatest-cypress-cli": "^3.0.29",
+    "nvm": "^0.0.4"
+  }
+}
