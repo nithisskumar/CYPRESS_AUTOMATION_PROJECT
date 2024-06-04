@@ -1,25 +1,27 @@
-jobs:
-  test_script_1:
-    docker:
-      - image: cypress/base:12.14.0
-    steps:
-      - checkout
-      - run:
-          name: Run Test Script 1
-          command: npm run cy:run:day11&12-afternoon
+version: 2.1
 
-  test_script_2:
+jobs:
+  test_script_afternoon:
     docker:
       - image: cypress/base:12.14.0
     steps:
       - checkout
       - run:
-          name: Run Test Script 2
-          command: npm run cy:run:day11&12-submit_morning
+          name: Run Test Script for Afternoon
+          command: npm run cy:run:afternoon
+
+  test_script_morning:
+    docker:
+      - image: cypress/base:12.14.0
+    steps:
+      - checkout
+      - run:
+          name: Run Test Script for Morning
+          command: npm run cy:run:morning
 
 workflows:
   version: 2
   parallel_execution:
     jobs:
-      - day11&12-afternoon
-      - day11&12-submit_morning
+      - test_script_afternoon
+      - test_script_morning
