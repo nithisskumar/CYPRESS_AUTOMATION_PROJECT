@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form id="registrationForm">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="customer.firstName" name="firstName"><br>
+        
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="customer.lastName" name="lastName"><br>
+        
+        <label for="street">Street Address:</label><br>
+        <input type="text" id="customer.address.street" name="street"><br>
+        
+        <label for="city">City:</label><br>
+        <input type="text" id="customer.address.city" name="city"><br>
+        
+        <label for="state">State:</label><br>
+        <input type="text" id="customer.address.state" name="state"><br>
+        
+        <label for="zipCode">Zip Code:</label><br>
+        <input type="text" id="customer.address.zipCode" name="zipCode"><br>
+        
+        <label for="phoneNumber">Phone Number:</label><br>
+        <input type="tel" id="customer.phoneNumber" name="phoneNumber"><br>
+        
+        <label for="ssn">SSN:</label><br>
+        <input type="text" id="customer.ssn" name="ssn"><br>
+        
+        <label for="username">Username:</label><br>
+        <input type="text" id="customer.username" name="username"><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="customer.password" name="password"><br>
+        
+        <label for="repeatedPassword">Repeat Password:</label><br>
+        <input type="password" id="repeatedPassword" name="repeatedPassword"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="successMessage" style="display:none; color:green;">Form submitted successfully</p>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById("successMessage").style.display = "block"; // Display success message
+        });
+    </script>
+</body>
+</html>
