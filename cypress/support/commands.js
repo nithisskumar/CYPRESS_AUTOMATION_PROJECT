@@ -25,3 +25,14 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import 'cypress-file-upload';
+
+Cypress.Commands.add('getAndIncrementUsernameNumber', () => {
+    cy.fixture('numberToBeBind.json').then((data) => {
+      const currentNumber = data.number;
+      const nextNumber = currentNumber + 1;
+      cy.writeFile('cypress/fixtures/numberToBeBind.json', { number: nextNumber }).then(() => {
+        return nextNumber;
+      });
+    });
+  });
+  
