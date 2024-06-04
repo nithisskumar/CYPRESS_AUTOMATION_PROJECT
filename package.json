@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run:afternoon": "cypress run --spec cypress/integration/day11&12-afternoon.cy.js",
-    "cypress:run:morning": "cypress run --spec cypress/integration/day11&12-submit_morning.cy.js",
+    "cypress:run:afternoon": "cypress run --spec cypress/e2e/day11-12-afternoon.cy.js",
+    "cypress:run:morning": "cypress run --spec cypress/e2e/day11-12-submit_morning.cy.js",
     "cypress:record": "cypress run --record --key",
     "e2e:chrome": "cypress run --browser chrome"
   },
