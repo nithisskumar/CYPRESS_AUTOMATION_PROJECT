@@ -106,3 +106,6 @@ describe('Network Handling Example', () => {
 })
 
 
+
+// "cypress:run:afternoon": "cypress run --spec cypress/e2e/day11-12-afternoon.cy.js",
+// "cypress:run:morning": "cypress run --spec cypress/e2e/day11-12-submit_morning.cy.js",

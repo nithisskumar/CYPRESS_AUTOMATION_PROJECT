@@ -4,7 +4,7 @@ describe('Amazon Search Functionality Test', () => {
         cy.visit('https://www.amazon.in');
     });
 
-    it('Validate UI State on Amazon' , () => {
+    it.only('Validate UI State on Amazon' , () => {
       // Type the search query into the search bar and submit the search
       cy.get('.nav-search-field').click().type('earbuds{enter}');
       

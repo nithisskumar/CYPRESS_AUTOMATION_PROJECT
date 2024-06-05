@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "rollup -c",
+    "type": "module",
     "start": "http-server",
     "test": "cypress run",
     "cypress:open": "cypress open",
